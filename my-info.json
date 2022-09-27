@@ -2,5 +2,6 @@
     "favoritecolors": ["darkgray", "black", "gray"],
     "countryname": "South Korea",
     "countrypopulation": 51367695,
-    "willvisit": true
+    "willvisit": true,
+    "favoritefoods": ["Pizza", "Noodle soup", "Grilled eggplant with pork"]
 }
