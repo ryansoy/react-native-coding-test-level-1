@@ -11,13 +11,11 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { CustomCategoryListItem } from "../components";
 
 import { CategoryModel, GetCategoryListModel } from "../model/CatalogListModel";
-import { getCatalogList, getCatalogDetail } from "../services/CatelogApi";
+import { getCatalogList } from "../services/CatelogApi";
 import { Colors } from "../utils/Colors";
 import { CategoryListTransform } from "../Transform";
 
 export function CatalogListScreen({ navigation }) {
-  const insets = useSafeAreaInsets();
-
   const [localLoading, setLocalLoading] = React.useState(false);
   const [showNoList, setShowNoList] = React.useState(false);
   const [isEnd, setIsEnd] = React.useState(false);
@@ -72,7 +70,9 @@ export function CatalogListScreen({ navigation }) {
     <CustomCategoryListItem
       item={item}
       onClickDetail={() =>
-        navigation.navigate("CatalogDetailScreen", { catalogName: item.name })
+        navigation.navigate("CatalogDetailScreen", {
+          catalogName: item?.name || "",
+        })
       }
     />
   );

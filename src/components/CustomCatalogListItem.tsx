@@ -39,8 +39,8 @@ export function CustomCategoryListItem(props: CustomCategoryListItemProps) {
 
   return (
     <View style={itemStyle.wrapperContainer} key={item.index}>
-      <Text style={itemStyle.buttonTitle}>{item.name}</Text>
-      <CustomButton text={"View"} onPress={() => onClickDetail(item.name)} />
+      <Text style={itemStyle.buttonTitle}>{item?.name || ""}</Text>
+      <CustomButton text={"View"} onPress={() => onClickDetail(item?.name)} />
     </View>
   );
 }

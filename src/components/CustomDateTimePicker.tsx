@@ -1,6 +1,5 @@
 import React from "react";
-import { TouchableOpacity, StyleSheet, Dimensions } from "react-native";
-import { Colors } from "../utils/Colors";
+import { TouchableOpacity } from "react-native";
 import { CustomTextInput } from "./CustomTextInput";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { FormatDate } from "../utils/Helper";
@@ -22,7 +21,7 @@ export function CustomDateTimePicker(props: CustomDateTimePickerProps) {
     onDatePickerChange,
   } = props;
 
-  const onConfirm = (data) => {
+  const onConfirm = (data: any) => {
     onDatePickerChange(FormatDate(data));
   };
 
