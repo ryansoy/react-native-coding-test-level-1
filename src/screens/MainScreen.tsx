@@ -11,6 +11,13 @@ export function MainScreen({ navigation }) {
           navigation.navigate("ContactUsScreen");
         }}
       />
+
+      <CustomButton
+        text={"View Catalog"}
+        onPress={() => {
+          navigation.navigate("CatalogListScreen");
+        }}
+      />
     </View>
   );
 }
